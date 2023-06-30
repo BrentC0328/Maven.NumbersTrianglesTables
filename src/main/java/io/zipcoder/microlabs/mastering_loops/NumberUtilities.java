@@ -37,34 +37,21 @@ public class NumberUtilities {
 
 
     public static String getSquareNumbers(int start, int stop, int step) {
-        String squaredNumbers = "";
-
-        for (int i = start; i < stop; i += step){
-            squaredNumbers += (i * i);
-
-        }
-
-
-        return squaredNumbers;
+      return getExponentiations(start, stop, step, 2);
     }
 
     public static String getRange(int start) {
-        return getRange(0, start, 1);
+        return getExponentiations(0, start, 1, 1);
     }
 
     public static String getRange(int start, int stop) {
-        return getRange(start, stop, 1);
+        return getExponentiations(start, stop, 1, 1);
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        String range = "";
-        for (int i = start; i < stop; i += step){
-            range += i;
-        }
-        return range;
+        return getExponentiations(start, stop, step, 1);
     }
-
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
         String exponents = "";
